@@ -2,6 +2,11 @@ spring:
     profiles:
         active: dev
 
+#Euraka
+eureka:
+  client:
+    service-url:
+      defaultZone: http://eureka1:7001/eureka/,http://eureka2:7002/eureka/,http://eureka3:7003/eureka/
 ---
 server:
     port: 8201
@@ -9,12 +14,6 @@ spring:
   profiles: dev
   application:
     name: springcloud-provider-dept
-
-#Euraka
-eureka:
-  client:
-    service-url:
-      defaultZone: http://eureka1:7001/eureka/,http://eureka2:7002/eureka/,http://eureka3:7003/eureka/
 
 ---
 server:
